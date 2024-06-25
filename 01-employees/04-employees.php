@@ -14,18 +14,18 @@
     WHERE TIMESTAMPDIFF(YEAR, birth_date, CURDATE()) >= 60
     ORDER BY edad DESC;';
     $resultado = mysqli_query($mysqli, $query); // ejecuta la query y la guarda en memoria
+    $num_filas = mysqli_num_rows($resultado);
+    echo "<p>Hay " . $num_filas . " empleados</p>";
     ?>
+
     <table border="1">
-        <tr><th>Nombre</th><th>Precio</th></tr>
+        <tr><th>Nombre</th><th>Apellido</th><th>Edad</th></tr>
         <?php
         while ($fila = mysqli_fetch_assoc($resultado))
         {
-            
-            
-            
+ 
             echo '<tr>';
-                echo '<td>' . $fila['first_name'] . '</td><td>' . $fila['last_name'] .'</td>';
-                echo '<td>'.$fila['edad'] .'</td>';
+                echo '<td>' . $fila['first_name'] . '</td><td>' . $fila['last_name'] .'</td><td>'.$fila['edad'] .'</td>';
             echo '</tr>';
         }
     echo '</table>';

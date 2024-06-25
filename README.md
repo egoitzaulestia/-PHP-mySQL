@@ -8,7 +8,7 @@ Ejemplos de conexión a Base de Datos y queries de consulta.
 
 Codigo de login sobre una tabla usuarios.
 
-login.php        ->   acceso.php    -> acceso_correcto.php
+login.php        ->   acceso.php    -> acceso_correcto.php  
 login.php?mes=x  <- 
 
 ### usuario.sql 
